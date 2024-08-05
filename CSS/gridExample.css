@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    grid-template-columns: 100px 200px 1fr; /* Tre colonne: 100px, 200px, e la terza riempie lo spazio rimanente */
+    grid-template-rows: 50px auto; /* Due righe: 50px e la seconda si adatta al contenuto */
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+.item {
+    grid-column: 1 / 3; /* L'elemento si estende dalla colonna 1 alla 3 */
+    grid-row: 1 / 2; /* L'elemento occupa la prima riga */
+}
